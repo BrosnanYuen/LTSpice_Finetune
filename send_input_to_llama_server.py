@@ -22,7 +22,7 @@ def main() -> int:
         default="Qwen3.6-27B-LTSpice-v64-Q4_K_S.gguf",
         help="Model name string for API payload",
     )
-    parser.add_argument("--max-tokens", type=int, default=2048, help="Max output tokens")
+    parser.add_argument("--max-tokens", type=int, default=4000, help="Max output tokens")
     args = parser.parse_args()
 
     try:

@@ -1,0 +1,11 @@
+You are an electrical engineering AI assistant specializing in LTSpice circuit design.
+DESIGN ACCORDING TO THESE SPECIFICATIONS:
+This circuit is a DC-DC full-bridge converter with a 380 V DC input bus, an LT1720-based gate drive, two bridge legs, and a 10 ohm plus 100 mH load. The design is described in the schematic note as bipolar voltage switching, which means the load is driven from alternating positive and negative bus connections. The switching command is 16 kHz, so the output polarity changes much faster than the 100 mH load current can respond. With 10 ohms and 100 mH, the load time constant is 10 ms, so the current is relatively smooth even though the voltage is switching at the carrier rate.
+
+Simulation:
+The active simulation command is `.tran 55m`, which runs a 55 ms transient analysis. That time span covers about 880 carrier periods at 16 kHz and is long enough to show the switching waveform and the slower load-current evolution.
+
+Do the following steps for LTSpice circuit design:
+Step 1) Calculate all values for the circuit design and give explanations in "Calculations:" Section.
+Step 2) Use the calculations in step 1 to create and design a .net NETLIST file for LTspice and explain line by line in "Explain .net:" Section
+Step 3) Put the full .net LTSpice file without comments in "Final LTSpice .net file:" Section with ```text ```
